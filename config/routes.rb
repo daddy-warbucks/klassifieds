@@ -1,4 +1,10 @@
 Klassifieds::Application.routes.draw do
+  get "pages/home"
+  get "pages/about"
+  get "pages/contact"
+  get "pages/help"
+  get "pages/terms"
+  get "pages/privacy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
