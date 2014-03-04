@@ -1,14 +1,100 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <%= display_meta_tags :site => 'klassifieds' %>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= display_meta_tags :site => 'klassifieds' %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="contain-to-grid sticky">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <a href="#"><img alt="klassifieds" src="/assets/logo.png" /></a>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+          <section class="top-bar-section">
+            <ul class="right"> 
+              <li class="divider"></li>
+              <li class="active"><a href="#">Post An Ad</a></li>
+              <li class="has-dropdown">
+                <a href="#">My Klassifieds</a>
+                <ul class="dropdown">
+                  <li><a href="#">Recently Viewed</a></li>
+                  <li><a href="#">My Ads</a></li>     
+                  <li><a href="#">My Profile</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">Browse Ads</a>
+                <ul class="dropdown">
+                  <li><a href="#">Auto</a></li>
+                  <li><a href="#">Jobs</a></li> 
+                  <li><a href="#">Real Estate</a></li>
+                  <li><a href="#">Home & Garden</a></li> 
+                  <li><a href="#">Clothes & Jewellery</a></li>
+                  <li><a href="#">Farming</a></li>  
+                  <li><a href="#">Computers</a></li>
+                  <li><a href="#">Business Services</a></li>
+                  <li><a href="#">Pets</a></li>
+                  <li><a href="#">Books, Games & Music</a></li> 
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Erotic</a></li>   
+                  <li><a href="#">Tickets</a></li>
+                  <li><a href="#">Children & Baby</a></li>
+                  <li><a href="#">Bargains</a></li> 
+                  <li><a href="#">Collectables</a></li>   
+                  <li><a href="#">Sport & Fitness</a></li> 
+                  <li><a href="#">Boats & Jetskis</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+      </nav>
+    </div>
+    <div class="row">
+        <div class="large-9 columns">
+          <%= yield %>
+        </div>
+        <div class="large-3 columns panel">
+            <p>Free, easy and Local</p>
+               <a href="#" class="button">Post An Ad</a>
+        </div>
+        <div class="large-3 columns panel">
+          <p>Spread the word</p>
+          <a href="#" class="fc-webicon facebook">Like us on Facebook</a>
+          <a href="#" class="fc-webicon googleplus">Share on Google Plus</a>
+          <a href="#" class="fc-webicon twitter">Tweet</a>
+        </div>
+        <footer>
+        <div class="large-12 columns panel">
+          <ul class="inline-list">
+            <li><a href="#">Sydney</a></li>  
+            <li><a href="#">Melbourne</a></li>
+            <li><a href="#">Brisbane</a></li> 
+            <li><a href="#">Canberra</a></li>
+            <li><a href="#">Adelaide</a></li>
+            <li><a href="#">Perth</a></li>
+            <li><a href="#">Darwin</a></li> 
+            <li><a href="#">Hobart</a></li>
+          </ul>
+          <ul class="inline-list">
+            <li><%= link_to "About Us", about_path %></li>
+            <li><%= link_to "klassifieds blog", blog_path %></li>
+            <li><%= link_to "Contact Us", contact_path %></li>
+            <li><%= link_to "Help", help_path %></li>
+            <li><%= link_to "Privacy Policy", privacy_path %></li>
+            <li><%= link_to "Posting Policy", posting_path %></li>
+            <li><%= link_to "Terms Of Use", terms_path %></li>
+            <li><%= link_to "Site Map", sitemap_path %></li>
+          </ul>
+              <p>&#169; 2014 Klassifieds. All Rights Reserved.</P>
+          </div>
+        </footer>
+          <%= javascript_include_tag "application" %>
+  </body>
 </html>

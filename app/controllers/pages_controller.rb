@@ -16,4 +16,13 @@ class PagesController < ApplicationController
 
   def privacy
   end
+
+  def blog
+  end
+
+  def sitemap
+  end
+
+  def posting
+  end
 end

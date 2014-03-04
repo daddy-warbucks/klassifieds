@@ -14,6 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
+gem 'foundation-social-web-icons-rails', git: "git://github.com/jclusso/foundation-social-web-icons-rails.git"
 
 gem 'meta-tags', :require => 'meta_tags'
 
