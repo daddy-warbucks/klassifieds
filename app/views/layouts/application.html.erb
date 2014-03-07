@@ -20,13 +20,13 @@
           <section class="top-bar-section">
             <ul class="right"> 
               <li class="divider"></li>
-              <li class="active"><a href="#">Post An Ad</a></li>
+              <li class="active"><%= link_to "Post An Ad!", new_user_registration_path %></li>
               <li class="has-dropdown">
                 <a href="#">My Klassifieds</a>
                 <ul class="dropdown">
-                  <li><a href="#">Recently Viewed</a></li>
-                  <li><a href="#">My Ads</a></li>     
-                  <li><a href="#">My Profile</a></li>
+                  <li><a href="#">My Ads</a></li> 
+                  <li><%= link_to "My Profile", edit_user_registration_path %></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                 </ul>
               </li>
               <li class="has-dropdown">
@@ -58,6 +58,9 @@
     </div>
     <div class="row">
         <div class="large-9 columns">
+          <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
           <%= yield %>
         </div>
         <div class="large-3 columns panel">
