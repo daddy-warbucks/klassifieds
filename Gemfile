@@ -43,7 +43,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
