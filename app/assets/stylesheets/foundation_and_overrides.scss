@@ -323,7 +323,7 @@ $button-margin-bottom: rem-calc(5);
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
-// $button-font-color: #9CC4E4;
+$button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
@@ -487,9 +487,9 @@ $input-focus-border-color: scale-color(#9CC4E4, $lightness: -40%);
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
-// $fieldset-border-color: #9CC4E4;
-// $fieldset-padding: rem-calc(10);
-// $fieldset-margin: rem-calc(5 0);
+$fieldset-border-color: #9CC4E4;
+$fieldset-padding: rem-calc(40);
+$fieldset-margin: rem-calc(15 0);
 
 // We use these to style the legends when you use them
 // $legend-bg: #E9F2F9;

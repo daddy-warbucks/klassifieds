@@ -59,8 +59,8 @@
     <div class="row">
         <div class="large-9 columns">
           <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
           <%= yield %>
         </div>
         <div class="large-3 columns panel">
