@@ -20,11 +20,12 @@
           <section class="top-bar-section">
             <ul class="right"> 
               <li class="divider"></li>
-              <li class="active"><%= link_to "Post An Ad!", new_user_registration_path %></li>
+              <li class="active"><%= link_to "Post An Ad!", new_item_path %></li>
               <li class="has-dropdown">
                 <a href="#">My Klassifieds</a>
                 <ul class="dropdown">
                   <li><a href="#">My Ads</a></li> 
+                  <li><%= link_to "Sign Up", new_user_registration_path %></li>
                   <li><%= link_to "My Profile", edit_user_registration_path %></li>
                   <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                 </ul>

@@ -1,0 +1,6 @@
+<div class="panel">
+<h5><%= @item.title %></h5>
+<p><%= @item.price %></p>
+<p><%= @item.content %></p>
+<p>Posted <%= time_ago_in_words(@item.created_at) %> ago.</p>
+</div>
