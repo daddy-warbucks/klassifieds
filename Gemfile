@@ -5,6 +5,7 @@ gem 'rails', '4.0.2'
 gem  'devise'
 gem 'simple_form'
 gem 'paperclip'
+gem 'aws-sdk'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
