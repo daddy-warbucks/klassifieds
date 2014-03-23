@@ -1,19 +1,10 @@
-<%= form_for @item do |f| %>
-  <% if @item.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@item.errors.count, "error") %> prohibited
-      this post from being saved:</h2>
-    <ul>
-    <% @item.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-  <% end %>
-  <div class="field">
-    <%= f.text_area :title %>
-    <%= f.text_area :price %>
-    <%= f.text_area :content, placeholder: "Compose new item..." %>
-  </div>
-  <%= f.submit "Post", class: "button" %>
+<%= simple_form_for @item do |f| %>
+  <% f.error_notification %>
+  <% f.full_error :thumb_file_size, class: "alert label" %>
+  <% f.full_error :thumb_content_type, class: "alert label" %>
+    <%= f.input :title %>
+    <%= f.input :price %>
+    <%= f.input :thumb, label: "Upload your main image (Used for search results page)" %>
+    <%= f.input :content, placeholder: "Compose new item..." %>
+  <%= f.submit "Post", class: "button" %> 
 <% end %>

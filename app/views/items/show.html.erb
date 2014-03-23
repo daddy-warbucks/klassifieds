@@ -2,5 +2,6 @@
 <h5><%= @item.title %></h5>
 <p><%= @item.price %></p>
 <p><%= @item.content %></p>
+<%= image_tag @item.thumb(:small)%>
 <p>Posted <%= time_ago_in_words(@item.created_at) %> ago.</p>
 </div>

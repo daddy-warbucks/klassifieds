@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140310100427) do
+ActiveRecord::Schema.define(version: 20140323005110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 20140310100427) do
     t.datetime "updated_at"
   end
 
+  create_table "images", force: true do |t|
+    t.string   "description"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
+  end
+
+  add_index "images", ["item_id"], name: "index_images_on_item_id", using: :btree
+
   create_table "items", force: true do |t|
     t.string   "price"
     t.text     "content"
@@ -29,6 +42,10 @@ ActiveRecord::Schema.define(version: 20140310100427) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "thumb_file_name"
+    t.string   "thumb_content_type"
+    t.integer  "thumb_file_size"
+    t.datetime "thumb_updated_at"
   end
 
   add_index "items", ["user_id", "created_at"], name: "index_items_on_user_id_and_created_at", using: :btree

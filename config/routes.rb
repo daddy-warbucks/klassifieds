@@ -1,6 +1,8 @@
 Klassifieds::Application.routes.draw do
   devise_for :users 
-  resources :items
+  resources :items do
+    resources :images
+  end
   root  'pages#home'
   match '/help',    to: 'pages#help',    via: 'get'
   match '/about',   to: 'pages#about',   via: 'get'
