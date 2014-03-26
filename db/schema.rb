@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20140323005110) do
   enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
-    t.string   "cat"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20140323005110) do
     t.text     "content"
     t.text     "title"
     t.integer  "user_id"
+    t.integer  "category_id"
+    t.integer  "subcategory_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "thumb_file_name"
@@ -51,7 +53,8 @@ ActiveRecord::Schema.define(version: 20140323005110) do
   add_index "items", ["user_id", "created_at"], name: "index_items_on_user_id_and_created_at", using: :btree
 
   create_table "subcategories", force: true do |t|
-    t.string   "subcat"
+    t.string   "name"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

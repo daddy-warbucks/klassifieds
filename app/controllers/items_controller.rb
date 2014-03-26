@@ -33,6 +33,6 @@ before_action :authenticate_user!, except: [:index, :show]
 	end
 
    def item_params
-      params.require(:item).permit(:content, :title, :price, :thumb)
+      params.require(:item).permit(:content, :title, :price, :thumb, :category_id, :subcategory_id)
     end
 end

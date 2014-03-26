@@ -5,6 +5,8 @@ class CreateItems < ActiveRecord::Migration
       t.text :content
       t.text :title
       t.integer :user_id
+      t.integer :category_id
+      t.integer :subcategory_id
       t.timestamps
     end
     add_index :items, [:user_id, :created_at]

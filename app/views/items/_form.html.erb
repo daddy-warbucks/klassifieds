@@ -4,6 +4,12 @@
   <% f.full_error :thumb_content_type, class: "alert label" %>
     <%= f.input :title %>
     <%= f.input :price %>
+    <%= f.label :category_id %><br />
+    <%= f.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true %>
+       <div class="field">
+     <%= f.label :subcategory_id, "Sub Category" %><br />
+    <%= f.grouped_collection_select :subcategory_id, Category.order(:name), :subcategories, :name, :id, :name, include_blank: true %>
+</div>
     <%= f.input :thumb, label: "Upload your main image (Used for search results page)" %>
     <%= f.input :content, placeholder: "Compose new item..." %>
   <%= f.submit "Post", class: "button" %> 
